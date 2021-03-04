@@ -12,6 +12,7 @@ def callback(sender, data, i):
 
 def clear(sender, data):
     delete_item('Lista de Tarefas')
+    index.pop()
     with window('Lista de Tarefas', width=400, height=400):
         set_window_pos('Lista de Tarefas', 0, 0)
         add_input_text('Tarefa')
