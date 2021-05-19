@@ -1,0 +1,1 @@
+, no_collapse=True, no_resize=True
