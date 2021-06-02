@@ -32,7 +32,7 @@ class Juros:
 set_main_window_size(350, 500)
 set_main_window_title("Calculadora de Juros")
 
-def mostrar(sender, data):
+def calcular(sender, data):
     dados = get_value("##Dados")
     capital = round(dados[0], 2)
     taxa = round(dados[1], 2)
@@ -54,6 +54,6 @@ with window("##calculadora de juros", x_pos=1, y_pos=0, width=330, height=200, n
         add_text("Tempo", tip="Coloque o período em meses")
     add_input_float3("##Dados", format="%.2f", width=200)
     add_radio_button("Opção de juros", items=["Simples", "Compostos"])
-    add_button("Calcular", callback=mostrar)
+    add_button("Calcular", callback=calcular)
 
 start_dearpygui()
