@@ -8,7 +8,7 @@ class Juros:
         self.tempo = t
 
     def simples(self):
-        self.juros_total = self.capital * self.taxa * self.tempo
+        self.juros_total = self.capital * (self.taxa / 100) * self.tempo
         self.montante = self.capital + self.juros_total
         with window("Resultado", x_pos=0, y_pos=200, width=330, height=300, no_close=True, no_collapse=True, no_resize=True):
             add_text(f"Capital: {round(self.capital, 2)}")
@@ -19,7 +19,7 @@ class Juros:
             add_button("Close Window", callback=lambda:delete_item("Resultado"))            
 
     def compostos(self):
-        self.montante = self.capital * ((1 + self.taxa)**self.tempo)
+        self.montante = self.capital * ((1 + (self.taxa / 100))**self.tempo)
         self.juros_total = self.montante - self.capital
         with window("Resultado", x_pos=0, y_pos=200, width=330, height=300, no_close=True, no_collapse=True, no_resize=True):
             add_text(f"Capital: {round(self.capital, 2)}")
