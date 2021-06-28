@@ -21,8 +21,8 @@ def ler_clientes(sender, data):
         clear_table("tabela-clientes")
     table_data = []
     banco_de_dados.select_clientes(table_data)
-    for data in table_data:
-        add_row("tabela-clientes", data)
+    for datas in table_data:
+        add_row("tabela-clientes", datas)
 
 def adicionar_livro(sender, data):
     livro_nome = get_value("##livro")
@@ -42,8 +42,8 @@ def ler_livros(sender, data):
         clear_table("tabela-livros")
     table_data = []
     banco_de_dados.select_livros(table_data)
-    for data in table_data:
-        add_row("tabela-livros", data)
+    for datas in table_data:
+        add_row("tabela-livros", datas)
 
 def adicionar_registro(sender, data):
     cliente_id = get_value("##cliente-id")
@@ -58,5 +58,5 @@ def ler_registros(sender, data):
         clear_table("tabela-registros")
     table_data = []
     banco_de_dados.select_registros(table_data)
-    for data in table_data:
-        add_row("tabela-registros", data)
+    for datas in table_data:
+        add_row("tabela-registros", datas)
