@@ -13,22 +13,22 @@ def converter():
     item = get_value(items)
     if item == "Celsius para Fahrenheit":
         result = celsius_to_fahrenheit(temperatura)
-        configure_item(resultado, default_value=f"{result}")
+        configure_item(resultado, default_value=f"Resultado: {round(result, 2)}°F")
     elif item == "Celsius para Kelvin":
         result = celsius_to_kelvin(temperatura)
-        configure_item(resultado, default_value=f"{result}")
+        configure_item(resultado, default_value=f"Resultado: {round(result, 2)}K")
     elif item == "Fahrenheit para Celsius":
         result = fahrenheit_to_celsius(temperatura)
-        configure_item(resultado, default_value=f"{result}")
+        configure_item(resultado, default_value=f"Resultado: {round(result, 2)}°C")
     elif item == "Fahrenheit para Kelvin":
         result = fahrenheit_to_kelvin(temperatura)
-        configure_item(resultado, default_value=f"{result}")
+        configure_item(resultado, default_value=f"Resultado: {round(result, 2)}K")
     elif item == "Kelvin para Celsius":
         result = kelvin_to_celsius(temperatura)
-        configure_item(resultado, default_value=f"{result}")
+        configure_item(resultado, default_value=f"Resultado: {round(result, 2)}°C")
     elif item == "Kelvin para Fahrenheit":
         result = kelvin_to_fahrenheit(temperatura)
-        configure_item(resultado, default_value=f"{result}")
+        configure_item(resultado, default_value=f"Resultado: {round(result, 2)}°F")
 
 with window(label="TermoCalc", width=250, height=400):
     add_text("Escolha a conversão", bullet=True)
