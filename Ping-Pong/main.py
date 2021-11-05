@@ -141,7 +141,7 @@ pygame.init()
 clock = pygame.time.Clock()
 
 WIDTH = 1280
-HEIGHT = 960
+HEIGHT = 720
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 icon = pygame.image.load('icon.ico')
 pygame.display.set_icon(icon)
@@ -160,7 +160,7 @@ paddle_group = pygame.sprite.Group()
 paddle_group.add(player)
 paddle_group.add(opponent)
 
-ball = Ball('images/Ball.png', WIDTH/2, HEIGHT/2, 4, 4, paddle_group)
+ball = Ball('images/Ball.png', WIDTH/2, HEIGHT/2, 3, 3, paddle_group)
 ball_sprite = pygame.sprite.GroupSingle()
 ball_sprite.add(ball)
 
