@@ -10,7 +10,6 @@ def salvar():
     tts.save('output.mp3')
 
 with dpg.window(label="Main", width=600, height=600):
-    dpg.add_text("Hello, world")
     dpg.add_button(label="Salvar", callback=salvar)
     dpg.add_input_text(
         hint="Digite algo...",
