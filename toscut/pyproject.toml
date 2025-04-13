@@ -1,0 +1,11 @@
+[project]
+name = "toscut"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "moviepy>=2.1.2",
+    "nicegui>=2.13.0",
+    "pywebview>=5.4",
+]
